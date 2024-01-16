@@ -1,0 +1,13 @@
+int main() {
+    int n, sum = 0;
+
+    do {
+        printf("Enter an integer: ");
+        scanf("%d", &n);
+        sum += n;
+
+    } while (n != 0);
+    printf("Sum of integers: %d", sum);
+
+    return 0;
+}
