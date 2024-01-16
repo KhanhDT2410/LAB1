@@ -1,0 +1,57 @@
+#include <stdio.h>
+
+int main() {
+    const double pa = 9000000.0;
+    const double pd = 3600000.0;
+
+    double thunhap;
+    int songuoiphuthuoc;
+
+    printf("Thu nhap hang nam cua ban: ");
+    scanf("%lf", &thunhap);
+
+    printf("So nguoi phu thuoc: ");
+    scanf("%d", &songuoiphuthuoc);
+
+    double tf = 12 * (pa + songuoiphuthuoc * pd);
+
+    double ti = thunhap - tf;
+    if (ti <= 0) {
+        printf("Thue thu nhap: 0\n");
+    } else {
+        int mucthue;
+        if (ti <= 5000000) {
+            mucthue = 1;
+        } else if (ti <= 10000000) {
+            mucthue = 2;
+        } else if (ti <= 18000000) {
+            mucthue = 3;
+        } else {
+            mucthue = 4;
+        }
+
+        double thuesuat;
+        switch (mucthue) {
+            case 1:
+                thuesuat = 0.05;
+                break;
+            case 2:
+                thuesuat = 0.10;
+                break;
+            case 3:
+                thuesuat = 0.15;
+                break;
+            case 4:
+                thuesuat = 0.20;
+                break;
+            default:
+                thuesuat = 0.0;
+                break;
+        }
+
+        double thuethunhap = ti * thuesuat;
+        printf("Thue thu nhap la: %.2lf\n", thuethunhap);
+    }
+
+    return 0;
+}
