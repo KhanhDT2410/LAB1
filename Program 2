@@ -14,8 +14,8 @@ int main() {
     scanf("%d", &songuoiphuthuoc);
 
     double tf = 12 * (pa + songuoiphuthuoc * pd);
-
     double ti = thunhap - tf;
+    
     if (ti <= 0) {
         printf("Thue thu nhap: 0\n");
     } else {
@@ -50,7 +50,10 @@ int main() {
         }
 
         double thuethunhap = ti * thuesuat;
-        printf("Thue thu nhap la: %.2lf\n", thuethunhap);
+        
+		printf("\nThu nhap khong chiu thue: %.2lf\n", tf);
+		printf("Thu nhap chiu thue: %.2lf\n", ti);
+		printf("Thue thu nhap: %.2lf\n", thuethunhap);
     }
 
     return 0;
