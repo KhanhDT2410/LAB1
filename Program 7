@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+    char char1, char2, t, c;
+    int d;
+
+    printf("Input the first character: ");
+    scanf(" %c", &char1);
+
+    printf("Input the second character: ");
+    scanf(" %c", &char2);
+
+    if (char1 > char2) {
+        t = char1;
+        char1 = char2;
+        char2 = t;
+    }
+
+    d = char2 - char1;
+
+    printf("ASCII code difference between char1 and char2: %d\n", d);
+    printf("Characters between char1 and char2 including code values in decimal, octal, hexadecimal expansions in ascending order:\n");
+
+    for (c = char1; c <= char2; c++)
+        printf("%c : %d, %o, %X\n", c, c, c, c);
+
+    return 0;
+}
