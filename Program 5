@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <ctype.h>
+
+int main() {
+    char ch;
+    int numofvowels = 0, numofconsonants = 0, numofothers = 0;
+
+    printf("Nhap cac ky tu (an ENTER de ket thuc): ");
+    
+    do {
+        ch = getchar();
+        ch = toupper(ch);
+        
+        if (isalpha(ch)) {
+            if ((ch >= 'A') && (ch <= 'Z')) {
+                switch (ch) {
+                    case 'A':
+                    case 'E':
+                    case 'I':
+                    case 'O':
+                    case 'U':
+                        numofvowels += 1;
+                        break;
+                    default:
+                        numofconsonants += 1;
+                }
+            } else {
+                numofothers += 1;
+            }
+        }
+    } while (ch != '\n');
+
+    printf("The number of Vowels is: %d\n", numofvowels);
+    printf("The number of Consonants is: %d\n", numofconsonants);
+    printf("The number of Others is: %d\n", numofothers);
+
+    return 0;
+}
