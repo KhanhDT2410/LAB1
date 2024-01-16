@@ -17,7 +17,9 @@ int main() {
     double ti = thunhap - tf;
     
     if (ti <= 0) {
-        printf("Thue thu nhap: 0\n");
+        printf("\nThu nhap khong chiu thue: %.2lf\n", tf);
+		printf("Thu nhap chiu thue: 0\n");
+		printf("Thue thu nhap: 0\n");
     } else {
         int mucthue;
         if (ti <= 5000000) {
