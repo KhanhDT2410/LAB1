@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main () {
+	double num1, num2;
+	char c;
+	printf("Nhap so thu nhat: ");
+	scanf("%lf", &num1);
+	printf("Nhap so thu hai: ");
+	scanf("%lf", &num2);
+	printf("Nhap toan tu can tinh: ");
+	scanf(" %c", &c);
+	
+	switch(c) {
+		case '+':
+			printf("%lf", num1 + num2);
+			break;
+		case '-':
+			printf("%lf", num1 - num2);
+			break;
+		case '*':
+			printf("%lf", num1 * num2);
+			break;
+		case '/': if (num2 == 0) {
+			printf("Divide by 0");
+		} else {
+			printf("%lf", num1 / num2);
+			break;
+		default:
+			printf("Toan tu khong hop le!");
+		}		
+	} 
+	return 0;
+}
